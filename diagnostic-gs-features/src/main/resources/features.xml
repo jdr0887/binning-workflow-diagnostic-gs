@@ -1,0 +1,15 @@
+<features name="diagnostic-gs-${project.version}" xmlns="http://karaf.apache.org/xmlns/features/v1.2.0">
+
+  <feature name="diagnostic-gs" version="${project.version}" resolver="(obr)">
+    <bundle>mvn:org.renci.binning.workflows.diagnostic-gs/diagnostic-gs-commons/${project.version}</bundle>
+    <bundle>mvn:org.renci.binning.workflows.diagnostic-gs/diagnostic-gs-commands/${project.version}</bundle>    
+    <bundle>mvn:org.renci.binning.workflows.diagnostic-gs/diagnostic-gs-executor/${project.version}</bundle>
+    <bundle>mvn:org.renci.binning.workflows.diagnostic-gs/diagnostic-gs-ws/${project.version}</bundle>
+  </feature>
+
+</features>
+
+
+
+
+
