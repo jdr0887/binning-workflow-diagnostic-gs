@@ -1,0 +1,4 @@
+org.renci.binning.diagnostic.gs.commands
+org.renci.binning.diagnostic.gs.commons
+org.renci.binning.diagnostic.gs.executor
+org.renci.binning.diagnostic.gs.ws
