@@ -1,0 +1,32 @@
+<document>
+  <body>
+    <section name="About">
+      <p>The 'binning' project aims to classify variants into disease
+      classification groups.  There are currenly 6 classifications,
+      which include:</p>
+      <ul>
+	<li>Known Pathogenic (a)</li>
+	<li>Likely Pathogenic (b)</li>
+	<li>Possibly Pathogenic (c)</li>	
+	<li>Variant of Uncertain Significance (d)</li>
+	<li>Likely Benign (e)</li>
+	<li>Almost Certainly Benign (f)</li>		
+      </ul>
+      <p>The software is dependent on the CANVAS database used by
+      RENCI to identify, annotate, and classify mutations for numerous
+      sequencing studies being performed at UNC &amp; RENCI.
+      Processing is broken out into tasks coupled together in a
+      business process workflow (BPM).</p>
+    </section>    
+    <subsection name="Technologies Used">
+      <p>
+	<ul>
+	  <li><a href="http://cxf.apache.org/">Apache CXF</a></li>
+	  <li><a href="http://karaf.apache.org/">Apache Karaf</a></li>
+	  <li><a href="http://openjpa.apache.org/">Apache OpenJPA</a></li>
+	  <li><a href="https://www.activiti.org/">Activiti</a></li>	  
+	</ul>
+      </p>
+    </subsection>    
+  </body>
+</document>

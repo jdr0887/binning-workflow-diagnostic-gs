@@ -1,0 +1,58 @@
+<document>
+  <properties>
+  </properties>
+  <body>
+    <section name="Plugins">
+      <subsection name="Workflow">
+	<p>Each plugin implements it's own set of routines/tasks to
+	run to accomplish the goal of classifying variants into a
+	'bin'.  Each plugin has been developed on a per study basis
+	where each study has it's own set of requirements.  At a
+	minimum, this means running the following tasks
+	sequencially:</p>
+	<ol>
+	  <li>Load VCF data into the LocatedVariants table (var.loc_var).</li>
+	  <li>Annotate the newly created LocatedVariants &amp; add to
+	  the appropriate Variants table (refseq.variants_61_2 for
+	  Genomic Reference build 37 or refseq.variants_78_4 for
+	  Genomic Reference build 38)</li>
+	  <li>Update frequency data.</li>
+	  <li>Add newly created LocatedVariants to the appropriate
+	  'bin' having added additional metadata (ie, clinvar
+	  assertions, hgmd tag, etc.).</li>
+	  <li>Generate Report</li>
+	</ol>
+	<p>The workflow is executed using the BPM engine from
+	Activiti.  As such, a BPMN file is used to specify the tasks
+	used.</p>
+      </subsection>
+      <subsection name="Executor">
+	<p>The binning project registers a ThreadPoolExecutor as a
+	container-based service intending to manage binning runs.  It
+	has a thread pool size of one with a max size of one...meaning
+	that only one binning worfklow will be run at a time.</p>
+      </subsection>
+      <subsection name="RESTful Service">
+	<p>Each plugin has a RESTful service to expose 2
+	functions:</p>
+	<ul>
+	  <li>Adding a binning job (submit).  This service returns the
+	  binning job identifier (Long).</li>
+	  <li>Checking the status of a binning job (lookupStatus).
+	  This service returns a the status of the binning job
+	  (String).</li>
+	</ul>
+      </subsection>
+    </section>
+    <section name="Examples">
+      <p>There are a number of binning workflows on github.  The
+      following is an incomplete list of binning workflows that we are
+      currently using in production.</p>
+      <ul>
+	<li><a href="http://github.com/jdr0887/binning-workflow-diagnostic-gs">Diagnostic GeneScreen</a></li>
+	<li><a href="http://github.com/jdr0887/binning-workflow-diagnostic-ncgenes">Diagnostic NCGenes</a></li>
+	<li><a href="http://github.com/jdr0887/binning-workflow-diagnostic-ncnexus">Diagnostic NCNEXUS</a></li>
+      </ul>
+    </section>
+  </body>
+</document>
