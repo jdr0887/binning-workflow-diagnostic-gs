@@ -1,13 +1,13 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <parent>
-    <groupId>org.renci.binning</groupId>
+    <groupId>org.renci.canvas</groupId>
     <artifactId>binning</artifactId>
-    <version>0.0.35</version>
+    <version>0.0.38</version>
   </parent>
-  <name>Binning :: Workflow :: Diagnostic Gene Screen</name>
+  <name>CANVAS :: Binning :: Diagnostic Gene Screen Workflow</name>
   <modelVersion>4.0.0</modelVersion>
-  <groupId>org.renci.binning.workflows</groupId>
-  <artifactId>diagnostic-gs</artifactId>
+  <groupId>org.renci.canvas.binning</groupId>
+  <artifactId>diagnostic-gs-workflow</artifactId>
   <version>0.0.15-SNAPSHOT</version>
   <packaging>pom</packaging>
   <properties>
@@ -33,22 +33,22 @@
   <dependencyManagement>
     <dependencies>
       <dependency>
-	<groupId>org.renci.binning.workflows.diagnostic-gs</groupId>
-	<artifactId>diagnostic-gs-commons</artifactId>
+	<groupId>org.renci.canvas.binning.diagnostic-gs-workflow</groupId>
+	<artifactId>diagnostic-gs-workflow-commons</artifactId>
 	<version>0.0.15-SNAPSHOT</version>
       </dependency>
       <dependency>
-	<groupId>org.renci.binning.workflows.diagnostic-gs</groupId>
-	<artifactId>diagnostic-gs-executor</artifactId>
+	<groupId>org.renci.canvas.binning.diagnostic-gs-workflow</groupId>
+	<artifactId>diagnostic-gs-workflow-executor</artifactId>
 	<version>0.0.15-SNAPSHOT</version>
       </dependency>      
     </dependencies>
   </dependencyManagement>
   <modules>
-    <module>diagnostic-gs-features</module>
-    <module>diagnostic-gs-commons</module>
-    <module>diagnostic-gs-commands</module>
-    <module>diagnostic-gs-executor</module>
-    <module>diagnostic-gs-ws</module>
+    <module>diagnostic-gs-workflow-features</module>
+    <module>diagnostic-gs-workflow-commons</module>
+    <module>diagnostic-gs-workflow-commands</module>
+    <module>diagnostic-gs-workflow-executor</module>
+    <module>diagnostic-gs-workflow-ws</module>
   </modules>
 </project>
