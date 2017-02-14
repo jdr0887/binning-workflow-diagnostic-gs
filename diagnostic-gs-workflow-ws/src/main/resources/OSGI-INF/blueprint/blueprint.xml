@@ -10,9 +10,9 @@
   ">
 
   <reference id="daoBeanService" interface="org.renci.canvas.dao.CANVASDAOBeanService" />
-  <reference id="binningExecutorService" interface="org.renci.binning.core.BinningExecutorService" />
+  <reference id="binningExecutorService" interface="org.renci.canvas.binning.core.BinningExecutorService" />
 
-  <bean id="diagnosticGeneScreenImpl" class="org.renci.binning.diagnostic.gs.ws.DiagnosticGeneScreenServiceImpl">
+  <bean id="diagnosticGeneScreenImpl" class="org.renci.canvas.binning.diagnostic.gs.ws.DiagnosticGeneScreenServiceImpl">
     <property name="daoBeanService" ref="daoBeanService" />
     <property name="binningExecutorService" ref="binningExecutorService" />
   </bean>
